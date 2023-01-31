@@ -7,14 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Windows.Devices.Bluetooth.Advertisement;
-using Windows.Foundation;
+
 
 namespace Bluetooth_Interface
 {
     public partial class Form1 : Form
     {
-        private BluetoothLEAdvertisementWatcher watcher = null;
         public Form1()
         {
             InitializeComponent();
@@ -31,34 +29,6 @@ namespace Bluetooth_Interface
         {
             DevicesList.Items.Clear();
 
-            watcher = new BluetoothLEAdvertisementWatcher();
-            watcher.ScanningMode = BluetoothLEScanningMode.Active;
-            watcher.Received += OnAdvertisementReceived;
-
-            watcher.SignalStrengthFilter.OutOfRangeTimeout = TimeSpan.FromMilliseconds(1000);
-            watcher.SignalStrengthFilter.SamplingInterval = TimeSpan.FromMilliseconds(500);
-
-            watcher.Start();
-        }
-
-        string nameBuffer = "";
-        string devName = "";
-        string devID = "";
-        private void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher sender, BluetoothLEAdvertisementReceivedEventArgs args)
-        {
-            nameBuffer = args.Advertisement.LocalName;
-
-            if (nameBuffer != string.Empty)
-            {
-                devName = nameBuffer;
-                devID = args.BluetoothAddress.ToString();
-
-                string[] devInfo = { devName, devID };
-                ListViewItem device = new ListViewItem(devInfo);
-                
-                DevicesList.Items.Add(device);
-
-            }
         }
 
         #endregion
