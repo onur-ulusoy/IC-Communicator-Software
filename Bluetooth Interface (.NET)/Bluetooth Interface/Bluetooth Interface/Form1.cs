@@ -29,23 +29,43 @@ namespace Bluetooth_Interface
 
         private void StartScanner()
         {
-            DevicesList.Clear();
+            DevicesList.Items.Clear();
 
             watcher = new BluetoothLEAdvertisementWatcher();
             watcher.ScanningMode = BluetoothLEScanningMode.Active;
-            watcher.Received += OnAdvertisementReceiver();
+            watcher.Received += OnAdvertisementReceived;
+
+            watcher.SignalStrengthFilter.OutOfRangeTimeout = TimeSpan.FromMilliseconds(1000);
+            watcher.SignalStrengthFilter.SamplingInterval = TimeSpan.FromMilliseconds(500);
+
+            watcher.Start();
         }
 
-        private TypedEventHandler<BluetoothLEAdvertisementWatcher, BluetoothLEAdvertisementReceivedEventArgs> OnAdvertisementReceiver()
+        string nameBuffer = "";
+        string devName = "";
+        string devID = "";
+        private void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher sender, BluetoothLEAdvertisementReceivedEventArgs args)
         {
-            throw new NotImplementedException();
+            nameBuffer = args.Advertisement.LocalName;
+
+            if (nameBuffer != string.Empty)
+            {
+                devName = nameBuffer;
+                devID = args.BluetoothAddress.ToString();
+
+                string[] devInfo = { devName, devID };
+                ListViewItem device = new ListViewItem(devInfo);
+                
+                DevicesList.Items.Add(device);
+
+            }
         }
 
         #endregion
 
         private void StartScanClick(object sender, EventArgs e)
         {
-
+            StartScanner();
         }
 
         private void StopScanClick(object sender, EventArgs e)
