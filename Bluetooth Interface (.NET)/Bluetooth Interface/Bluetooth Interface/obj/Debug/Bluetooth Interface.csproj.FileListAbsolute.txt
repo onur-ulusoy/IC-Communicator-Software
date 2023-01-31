@@ -1,0 +1,10 @@
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\bin\Debug\Bluetooth Interface.exe.config
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\bin\Debug\Bluetooth Interface.exe
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\bin\Debug\Bluetooth Interface.pdb
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\obj\Debug\Bluetooth Interface.csproj.AssemblyReference.cache
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\obj\Debug\Bluetooth_Interface.Properties.Resources.resources
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\obj\Debug\Bluetooth Interface.csproj.GenerateResource.cache
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\obj\Debug\Bluetooth Interface.csproj.CoreCompileInputs.cache
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\obj\Debug\Bluetooth Interface.exe
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\obj\Debug\Bluetooth Interface.pdb
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\obj\Debug\Bluetooth_Interface.Form1.resources
