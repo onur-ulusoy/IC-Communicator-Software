@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.Devices.Bluetooth.Advertisement;
+using Windows.Foundation;
 
 namespace Bluetooth_Interface
 {
     public partial class Form1 : Form
     {
+        private BluetoothLEAdvertisementWatcher watcher = null;
         public Form1()
         {
             InitializeComponent();
@@ -19,8 +22,26 @@ namespace Bluetooth_Interface
 
         private void Form1Load(object sender, EventArgs e)
         {
+            CheckForIllegalCrossThreadCalls = false;
+        }
 
-        }   
+        #region Ble Connection
+
+        private void StartScanner()
+        {
+            DevicesList.Clear();
+
+            watcher = new BluetoothLEAdvertisementWatcher();
+            watcher.ScanningMode = BluetoothLEScanningMode.Active;
+            watcher.Received += OnAdvertisementReceiver();
+        }
+
+        private TypedEventHandler<BluetoothLEAdvertisementWatcher, BluetoothLEAdvertisementReceivedEventArgs> OnAdvertisementReceiver()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
 
         private void StartScanClick(object sender, EventArgs e)
         {

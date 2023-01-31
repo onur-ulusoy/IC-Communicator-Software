@@ -29,73 +29,74 @@ namespace Bluetooth_Interface
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.DevicesList = new System.Windows.Forms.ListView();
+            this.StartScan = new System.Windows.Forms.Button();
+            this.StopScan = new System.Windows.Forms.Button();
+            this.Disconnect = new System.Windows.Forms.Button();
+            this.Connect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // DevicesList
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 77);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(485, 229);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.DeviceListSelectedIndexChanged);
+            this.DevicesList.HideSelection = false;
+            this.DevicesList.Location = new System.Drawing.Point(12, 77);
+            this.DevicesList.Name = "DevicesList";
+            this.DevicesList.Size = new System.Drawing.Size(485, 229);
+            this.DevicesList.TabIndex = 0;
+            this.DevicesList.UseCompatibleStateImageBehavior = false;
+            this.DevicesList.View = System.Windows.Forms.View.Details;
+            this.DevicesList.SelectedIndexChanged += new System.EventHandler(this.DeviceListSelectedIndexChanged);
             // 
-            // button1
+            // StartScan
             // 
-            this.button1.Location = new System.Drawing.Point(12, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 35);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Scan";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.StartScanClick);
+            this.StartScan.Location = new System.Drawing.Point(12, 22);
+            this.StartScan.Name = "StartScan";
+            this.StartScan.Size = new System.Drawing.Size(113, 35);
+            this.StartScan.TabIndex = 1;
+            this.StartScan.Text = "Scan";
+            this.StartScan.UseVisualStyleBackColor = true;
+            this.StartScan.Click += new System.EventHandler(this.StartScanClick);
             // 
-            // button2
+            // StopScan
             // 
-            this.button2.Location = new System.Drawing.Point(131, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 35);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Stop Scanning";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.StopScanClick);
+            this.StopScan.Location = new System.Drawing.Point(131, 22);
+            this.StopScan.Name = "StopScan";
+            this.StopScan.Size = new System.Drawing.Size(113, 35);
+            this.StopScan.TabIndex = 2;
+            this.StopScan.Text = "Stop Scanning";
+            this.StopScan.UseVisualStyleBackColor = true;
+            this.StopScan.Click += new System.EventHandler(this.StopScanClick);
             // 
-            // button3
+            // Disconnect
             // 
-            this.button3.Location = new System.Drawing.Point(384, 22);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 35);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Disconnect";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.DisconnectClick);
+            this.Disconnect.Location = new System.Drawing.Point(384, 22);
+            this.Disconnect.Name = "Disconnect";
+            this.Disconnect.Size = new System.Drawing.Size(113, 35);
+            this.Disconnect.TabIndex = 3;
+            this.Disconnect.Text = "Disconnect";
+            this.Disconnect.UseVisualStyleBackColor = true;
+            this.Disconnect.Click += new System.EventHandler(this.DisconnectClick);
             // 
-            // button4
+            // Connect
             // 
-            this.button4.Location = new System.Drawing.Point(265, 22);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 35);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Connect";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.ConnectClick);
+            this.Connect.Location = new System.Drawing.Point(265, 22);
+            this.Connect.Name = "Connect";
+            this.Connect.Size = new System.Drawing.Size(113, 35);
+            this.Connect.TabIndex = 4;
+            this.Connect.Text = "Connect";
+            this.Connect.UseVisualStyleBackColor = true;
+            this.Connect.Click += new System.EventHandler(this.ConnectClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 325);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.Connect);
+            this.Controls.Add(this.Disconnect);
+            this.Controls.Add(this.StopScan);
+            this.Controls.Add(this.StartScan);
+            this.Controls.Add(this.DevicesList);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1Load);
@@ -105,11 +106,11 @@ namespace Bluetooth_Interface
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ListView DevicesList;
+        private System.Windows.Forms.Button StartScan;
+        private System.Windows.Forms.Button StopScan;
+        private System.Windows.Forms.Button Disconnect;
+        private System.Windows.Forms.Button Connect;
     }
 }
 
