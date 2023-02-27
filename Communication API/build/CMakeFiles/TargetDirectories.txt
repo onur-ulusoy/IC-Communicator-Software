@@ -1,0 +1,5 @@
+/home/onur/Desktop/IC-Communicator-Software/Communication API/build/CMakeFiles/edit_cache.dir
+/home/onur/Desktop/IC-Communicator-Software/Communication API/build/CMakeFiles/rebuild_cache.dir
+/home/onur/Desktop/IC-Communicator-Software/Communication API/build/src/CMakeFiles/comm-api.dir
+/home/onur/Desktop/IC-Communicator-Software/Communication API/build/src/CMakeFiles/edit_cache.dir
+/home/onur/Desktop/IC-Communicator-Software/Communication API/build/src/CMakeFiles/rebuild_cache.dir

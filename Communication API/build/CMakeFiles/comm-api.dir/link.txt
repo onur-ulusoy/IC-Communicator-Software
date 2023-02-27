@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/comm-api.dir/src/main.cpp.o CMakeFiles/comm-api.dir/src/libbluetooth.cpp.o -o comm-api.out 
