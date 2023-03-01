@@ -12,3 +12,5 @@ C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.N
 C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\bin\Debug\Windows.winmd
 C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\bin\Debug\System.Runtime.WindowsRuntime.xml
 C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\obj\Debug\Bluetooth Interface.csproj.CopyComplete
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\bin\Debug\InTheHand.Net.Bluetooth.dll
+C:\Users\onuru\OneDrive\Desktop\IC-Communicator-Software\Bluetooth Interface (.NET)\Bluetooth Interface\Bluetooth Interface\bin\Debug\InTheHand.Net.Bluetooth.xml

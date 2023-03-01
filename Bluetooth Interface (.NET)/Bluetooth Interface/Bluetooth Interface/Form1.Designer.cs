@@ -29,20 +29,22 @@ namespace Bluetooth_Interface
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DevicesList = new System.Windows.Forms.ListView();
+            this.DeviceName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DeviceAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StartScan = new System.Windows.Forms.Button();
             this.StopScan = new System.Windows.Forms.Button();
             this.Disconnect = new System.Windows.Forms.Button();
             this.Connect = new System.Windows.Forms.Button();
-            this.DeviceName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DeviceID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ScanTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // DevicesList
             // 
             this.DevicesList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.DeviceName,
-            this.DeviceID});
+            this.DeviceAddress});
             this.DevicesList.HideSelection = false;
             this.DevicesList.Location = new System.Drawing.Point(12, 77);
             this.DevicesList.Name = "DevicesList";
@@ -51,6 +53,16 @@ namespace Bluetooth_Interface
             this.DevicesList.UseCompatibleStateImageBehavior = false;
             this.DevicesList.View = System.Windows.Forms.View.Details;
             this.DevicesList.SelectedIndexChanged += new System.EventHandler(this.DeviceListSelectedIndexChanged);
+            // 
+            // DeviceName
+            // 
+            this.DeviceName.Text = "Device Name";
+            this.DeviceName.Width = 237;
+            // 
+            // DeviceAddress
+            // 
+            this.DeviceAddress.Text = "Device Address";
+            this.DeviceAddress.Width = 240;
             // 
             // StartScan
             // 
@@ -92,15 +104,10 @@ namespace Bluetooth_Interface
             this.Connect.UseVisualStyleBackColor = true;
             this.Connect.Click += new System.EventHandler(this.ConnectClick);
             // 
-            // DeviceName
+            // ScanTimer
             // 
-            this.DeviceName.Text = "Device Name";
-            this.DeviceName.Width = 237;
-            // 
-            // DeviceID
-            // 
-            this.DeviceID.Text = "Device ID";
-            this.DeviceID.Width = 240;
+            this.ScanTimer.Interval = 2000;
+            this.ScanTimer.Tick += new System.EventHandler(this.ScanTimerTick);
             // 
             // Form1
             // 
@@ -127,7 +134,8 @@ namespace Bluetooth_Interface
         private System.Windows.Forms.Button Disconnect;
         private System.Windows.Forms.Button Connect;
         private System.Windows.Forms.ColumnHeader DeviceName;
-        private System.Windows.Forms.ColumnHeader DeviceID;
+        private System.Windows.Forms.ColumnHeader DeviceAddress;
+        private System.Windows.Forms.Timer ScanTimer;
     }
 }
 
